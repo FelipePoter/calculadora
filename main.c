@@ -3,9 +3,9 @@
 int main()
 {
   char choice = 's';
-  int number1, number2, result;
+  float number1, number2, result;
   int option;
-  while (choice == 's')
+  while (choice == 's' || choice == 'S')
   {
     printf("===============================\n");
     printf("   Simple Calculator\n");
@@ -23,40 +23,48 @@ int main()
     if (option == 1)
     {
       printf("Digite o primeiro numero: ");
-      scanf("%d", &number1);
+      scanf("%f", &number1);
+      getchar();
       printf("Digite o segundo numero: ");
-      scanf("%d", &number2);
+      scanf("%f", &number2);
+      getchar();
       result = number1 + number2;
-      printf("Resultado: %d + %d = %d\n", number1, number2, result);
+      printf("Resultado: %f + %f = %f\n", number1, number2, result);
     }
     if (option == 2)
     {
       printf("Digite o primeiro numero: ");
-      scanf("%d", &number1);
+      scanf("%f", &number1);
+      getchar();
       printf("Digite o segundo numero: ");
-      scanf("%d", &number2);
+      scanf("%f", &number2);
+      getchar();
       result = number1 - number2;
-      printf("Resultado: %d - %d = %d\n", number1, number2, result);
+      printf("Resultado: %f - %f = %f\n", number1, number2, result);
     }
     if (option == 3)
     {
       printf("Digite o primeiro numero: ");
-      scanf("%d", &number1);
+      scanf("%f", &number1);
+      getchar();
       printf("Digite o segundo numero: ");
-      scanf("%d", &number2);
+      scanf("%f", &number2);
+      getchar();
       result = number1 * number2;
-      printf("Resultado: %d * %d = %d\n", number1, number2, result);
+      printf("Resultado: %f * %f = %f\n", number1, number2, result);
     }
     if (option == 4)
     {
       printf("Digite o primeiro numero: ");
-      scanf("%d", &number1);
+      scanf("%f", &number1);
+      getchar();
       printf("Digite o segundo numero: ");
-      scanf("%d", &number2);
+      scanf("%f", &number2);
+      getchar();
       if (number2 != 0)
       {
-        float divresult = (float)number1 / (float)number2;
-        printf("Resultado: %d / %d = %.2f\n", number1, number2, divresult);
+        float divresult = number1 / number2;
+        printf("Resultado: %f / %f = %.2f\n", number1, number2, divresult);
       }
       else
       {
@@ -75,7 +83,8 @@ int main()
     }
     printf("Deseja realizar outra operacao? (s/n): ");
     scanf(" %c", &choice);
-    if (choice == 'n')
+    getchar();
+    if (choice == 'n' || choice == 'N')
     {
       printf("Obrigado por usar a calculadora! Até a próxima.\n");
       return 0;
