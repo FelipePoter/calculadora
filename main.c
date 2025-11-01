@@ -19,6 +19,7 @@ int main()
     printf("Option: ");
 
     scanf("%d", &option);
+    getchar();
 
     if (option == 1)
     {
