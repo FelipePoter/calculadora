@@ -97,9 +97,7 @@ int main()
     if (choice == 'n' || choice == 'N')
     {
       printf("Obrigado por usar a calculadora! Até a próxima.\n");
-      return 0;
     }
-
-    return 0;
   }
+  return 0;
 }
