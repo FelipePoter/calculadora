@@ -85,11 +85,21 @@ int main()
     printf("Deseja realizar outra operacao? (s/n): ");
     scanf(" %c", &choice);
     getchar();
+
+    while (choice != 's' && choice != 'S' && choice != 'n' && choice != 'N')
+    {
+      printf("Resposta inválida. Por favor, digite 's' para sim ou 'n' para não.\n");
+      printf("Deseja realizar outra operacao? (s/n): ");
+      scanf(" %c", &choice);
+      getchar();
+    }
+
     if (choice == 'n' || choice == 'N')
     {
       printf("Obrigado por usar a calculadora! Até a próxima.\n");
       return 0;
     }
+
+    return 0;
   }
-  return 0;
 }
