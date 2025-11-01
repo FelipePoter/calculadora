@@ -18,6 +18,13 @@ int main()
     printf("5. Exit\n");
     printf("Option: ");
 
+    while (scanf("%d", &option) != 1 || option < 1 || option > 5)
+    {
+      while (getchar() != '\n');
+      printf("Entrada invalida. Por favor insira um numero entre 1 e 5.\n");
+      printf("Option: ");
+    }
+
     scanf("%d", &option);
     getchar();
 
